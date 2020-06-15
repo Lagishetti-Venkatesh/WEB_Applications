@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Flask application building</title>
+    <style>
+      .img-container {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="img-container">
+     <img src={{url_for('static', filename='venkat.jpg')}} height="500", width="350"/>
+<br/>
+    {% block body %}
+
+        {% for i in v %}
+            {{i}} <br/>
+        {% endfor %}
+
+
+    {% if 'Venkatesh' in v %}
+      <p> {{v[0]}} is there in the list </p>
+
+    {% else %}
+      <p> {{v[0]}} is not there in the list </p>
+
+    {% endif %}
+    {% endblock %}
+</div>
+
+  </body>
+</html>
